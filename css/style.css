@@ -106,6 +106,12 @@ address {
     color: var(--main-text-color);
 
     position: relative;
+
+    transition: color 250ms var(--timing-function);
+}
+.nav-list-link:hover,
+.nav-list-link:focus{
+    color: var(--accent-color);
 }
 .nav-list-link::after{
     content: " ";
@@ -121,14 +127,9 @@ address {
     border-radius: 2px;
 
     opacity: 0;
-    transition-property: opacity 250ms var(--timing-function);
 }
 .current:after{
     opacity: 1;
-}
-.nav-list-link:hover,
-.nav-list-link:focus{
-    color: var(--accent-color);
 }
 .contact-links-list{
     display: flex;
@@ -142,10 +143,18 @@ address {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
+
+    transition: color 250ms var(--timing-function);
 }
 .contact-links-list-link:hover,
 .contact-links-list-link:focus {
     color: var(--accent-color);
+}
+.contact-icon{
+    margin-right:10px;
+    fill: var(--second-text-color);
+
+    transition: fill 250ms var(--timing-function);
 }
 .contact-links-list-link:hover .contact-icon,
 .contact-links-list-link:focus .contact-icon{
@@ -156,11 +165,6 @@ address {
 }
 .contact-links-list-item:not(:last-child){
     margin-right: 50px;
-}
-.contact-icon{
-    margin-right:10px;
-    fill: var(--second-text-color);
-    
 }
 /* ========= END HEADER ========= */
 
@@ -200,9 +204,7 @@ address {
     border:0;
     cursor: pointer;
 
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition: background-color 250ms var(--timing-function);
     }
 
 .hero-button:hover{
@@ -269,7 +271,7 @@ address {
 
 /* ========= START OUR TEAM ========= */
 .employees-section{
-    background: #F5F4FA;
+    background: var(--background-color-icon);
     text-align: center;
     padding-top: 94px;
     padding-bottom: 94px;
@@ -314,16 +316,20 @@ address {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    
+    transition: background-color 250ms var(--timing-function);
+}
+.social-icon-link:hover,
+.social-icon-link:focus{
+    background-color:var(--accent-color);
 }
 .social-icon-item:not(:last-child){
     margin-right: 10px;
 }
 .social-icon{
     fill: var(--icon-color);
-}
-.social-icon-link:hover,
-.social-icon-link:focus{
-    background-color:var(--accent-color);
+
+    transition: fill 250ms var(--timing-function);
 }
 .social-icon-link:hover .social-icon,
 .social-icon-link:focus .social-icon{
@@ -353,20 +359,26 @@ address {
     border-radius: 4px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;     
+
+    transition: border 250ms var(--timing-function); 
 }
 .clients-icon-link:hover,
 .clients-icon-link:focus{
     border: 1px solid var(--accent-color);
 }
+.client-icon{
+    width: 106px;
+    height: 60px;
+    fill: var(--icon-color);
+
+    transition: fill 250ms var(--timing-function);
+}
 .clients-icon-link:hover .client-icon,
 .clients-icon-link:focus .client-icon{
     fill: var(--accent-color);
 }
-.client-icon{
-    width: 106px;
-    height: 60px;
-    fill: var(--icon-color);}
+
 /* ========= END CLIENTS ========= */
 /* ========= START FOOTER ========= */
 .footer{
@@ -404,6 +416,8 @@ address {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    transition: color 250ms var(--timing-function); 
 }
 .contact-info-list li:not(:last-child){
     margin-bottom: 9px;
@@ -431,6 +445,8 @@ address {
     height: 44px;
     border-radius: 50%;
     background-color: var(--second-backgrounf-color);
+
+    transition: background-color 250ms var(--timing-function); 
 }
 .footer-social-icon-link:hover,
 .footer-social-icon-link:focus{
@@ -469,7 +485,12 @@ address {
     cursor: pointer;
     border: none;
     border-radius: 4px;
+
+    transition: 
+    background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
+
 .modal-btn:hover,
 .modal-btn:focus{
     background-color: var(--accent-color);
@@ -491,6 +512,8 @@ address {
 }
 .project-list-link{
     display: block;
+
+    transition: box-shadow 250ms var(--timing-function);
 }
 .project-list-link:hover, 
 .project-list-link:focus{
@@ -506,7 +529,6 @@ address {
     line-height:1.55;
     color: var(--white-text-color);
 }
-
 .project-wrapp{
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
