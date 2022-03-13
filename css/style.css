@@ -261,12 +261,32 @@ address {
     margin-bottom: 50px;
   }
   .work-gallery-list{
-      display: flex;
-      flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .work-gallery-item{
+    position: relative;
   }
   .work-gallery-item:not(:last-child){
-      margin-right: 30px;
+    margin-right: 30px;
   }
+  .gallery-title{
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 27px 10px;
+
+    font-size: 14px;
+    line-height: 1.15;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    background-color: rgba(47, 48, 58, 0.8);;
+
+}
 /* ========= END OUR WORK ========= */
 
 /* ========= START OUR TEAM ========= */
@@ -452,6 +472,9 @@ address {
 .footer-social-icon-link:focus{
     background-color: var(--accent-color);
 }
+.footer-social{
+    transition: fill 250ms var(--timing-function); 
+}
 .footer-social-icon-link:hover .footer-social,
 .footer-social-icon-link:focus .footer-social{
     fill: var(--white-text-color);
@@ -510,6 +533,33 @@ address {
     background: var(--white-text-color);
     margin: 15px;
 }
+.project-image{
+    position: relative;
+
+    overflow: hidden;
+}
+.project-action{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    background-color: var(--accent-color);
+    opacity: 0.9;
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-function);
+}
+.project-list-link:hover .project-action,
+.project-list-link:focus .project-action{
+    transform: translateY(0);
+}
+.project-description{
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-text-color);
+}
 .project-list-link{
     display: block;
 
@@ -520,14 +570,6 @@ address {
    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
    0px 4px 4px rgba(0, 0, 0, 0.06), 
    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.project-description{
-    display: inline-block;
-    
-    font-weight: 400;
-    font-size: 18px;
-    line-height:1.55;
-    color: var(--white-text-color);
 }
 .project-wrapp{
     padding: 20px 24px;
